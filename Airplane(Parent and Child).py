@@ -5,10 +5,10 @@ class Airplane: #Airplane is parent class
     company = input("Which company does this plane belong to?") #Could be used later to form relation between parent and child (i.e. older companies that no longer exist may have been using prop planes)
 
 class PropPlane(Airplane): #the way the syntax works here shows that PropPlane is a child class of Airplane
-    movementmech = propeller 
-    history = original #The first airplanes started out as prop planes
+    movementmech = "propeller" 
+    history = "original" #The first airplanes started out as prop planes
 
 class JetPlane(Airplane):
-    movementmech = Jet Propulsion
-    history = newer
+    movementmech = "Jet Propulsion"
+    history = "newer"
     
