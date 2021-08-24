@@ -9,6 +9,7 @@ class PropPlane(Airplane): #the way the syntax works here shows that PropPlane i
     history = "original" #The first airplanes started out as prop planes
 
 class JetPlane(Airplane):
-    movementmech = "Jet Propulsion"
-    history = "newer"
+   company:"Delta"
+   span: 20000
+    
     
