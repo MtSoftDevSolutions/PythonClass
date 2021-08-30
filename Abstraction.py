@@ -18,7 +18,8 @@ class checkPay (employeePay):
         print("We have mailed you a check for {}, thank you for your hard work.".format(amount))
 
 if __name__ == "__main__":
-    obj = cashPay () #This makes the cashPay class show up 
+    obj = cashPay () #This makes the cashPay class show up
+    obj.pay("$1500")
     obj.payment("$1500") #This gives the value in the sentence and correctly works with the .format
     obj = checkPay() 
     obj.payment("$1500")
