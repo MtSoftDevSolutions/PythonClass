@@ -1,23 +1,18 @@
-class middleName:
-    def __init__(self) :
-        self._protectedVar = "Hunter"
-
-
-obj = middleName ( )
-obj._protectedVar = "Lauren"
-print (obj._protectedVar)
-
-class Middle:
+class superheroNames: #This first class exists to set up the protected 
     def __init__(self):
-        self.__privateVar = "Lauren"
+        self._protectedVar = "Unknown" #Unknown is a place holder
+obj = superheroNames()
+obj._protectedVar = "Wolverine" #Unkown now becomes Wolverine and is printed as such
+print(obj._protectedVar)
 
-    def getPrivate(self):
-        print(self.__privateVar)
-
-    def getmiddleName(self):
-        self._protectedVar = "Hunter"
-        print(self._protectedVar)
-
-obj = Middle()
-obj.getPrivate()
-obj.getmiddleName()
+class superheroNames:
+    def __init__(self):
+        self.__privateVar = "Bub"
+    def getPrivate (self):
+        print(self.__privateVar) #Prints out Bub, again, bub is somewhat of a place holder existing for Logan
+    def setPrivate(self, private):
+        self.__privateVar = private
+obj = superheroNames() #Calls the class superheroNames
+obj.getPrivate() #Will print out Bub
+obj.setPrivate("Logan") #Sets the private variable from Bub to Logan
+obj.getPrivate() #Prints out Logan
