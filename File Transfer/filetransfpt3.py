@@ -65,7 +65,7 @@ class ParentWindow(Frame):
                 mtime = dt.datetime.fromtimestamp(st.st_mtime)
                 print(mtime)
                 if mtime > ago:
-                    print("True:  ", fname, " at ", mtime.strftime("%H:%M %m/%d/%Y"))
+                    print("True:  ", fName, " at ", mtime.strftime("%H:%M %m/%d/%Y"))
                     shutil.move(path, destination)
 
 
