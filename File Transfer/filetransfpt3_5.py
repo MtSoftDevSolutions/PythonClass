@@ -49,24 +49,24 @@ class ParentWindow(Frame):
         self.entryDestination.insert(0, folder_selected)
 
     def transFiles(self):
-        source = self.entrySource.get()
+        source = self.entrySource.get() #From selectOrigin we stored the folder path to self.entrySource.insert we get it back so that we can use it by using .get()
         print (source)
         destination = self.entryDestination.get()
-        print(destination)
+        print(destination) #work to 
         now = dt.datetime.now()
         ago = now-dt.timedelta(hours=24)
         print(ago)
         strftime = "%H:%M %m/%d/%Y"
         for root, dirs, files in os.walk(source):
             for fName in files:
-                path = os.path.join(root, fName)
-                st = os.stat(path)
+                path = os.path.join(root, fName) #fname is a variable, it is one that I created, could have been anything, just has to match the variable after for in line above
+                st = os.stat(path) #st has many of the attributes about the files
                 print(st)
-                mtime = dt.datetime.fromtimestamp(st.st_mtime)
+                mtime = dt.datetime.fromtimestamp(st.st_mtime) #mtime is when we last used the file vs ctime would be when we created the file
                 print(mtime)
                 if mtime > ago:
                     print("True:  ", fname, " at ", mtime.strftime("%H:%M %m/%d/%Y"))
-                    shutil.move(path, destination)
+                    shutil.move(path, dest)
 
 
             
